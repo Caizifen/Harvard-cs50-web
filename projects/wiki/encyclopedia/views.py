@@ -74,7 +74,7 @@ def newEntry(request):
         return render(request, "encyclopedia/newEntry.html", {
             "form": NewEntryForm(),
             "existing": False
-        })
+        }) 
 
 
 def edit(request, entry):
@@ -86,7 +86,7 @@ def edit(request, entry):
     else:
         form = NewEntryForm()
         form.fields["title"].initial = entry
-        form.fields["title"].widget = froms.HiddenInput
+        form.fields["title"].widget = forms.HiddenInput()
         form.fields["content"].initial = entryPage
         form.fields["edit"].initial = True
         
