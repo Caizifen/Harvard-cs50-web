@@ -4,6 +4,7 @@ from django.urls import reverse
 from django import forms
 from django.contrib.auth.decorators import login_required
 from markdown2 import Markdown
+import secrets
 
 from . import util
 
@@ -95,3 +96,9 @@ def edit(request, entry):
             "edit": form.fields["edit"].initial,
             "entryTitle": form.fields["title"].initial
         })
+
+
+def random(request):
+    entries = util.list_entries()
+    randomEntry = secrets.choice(entries)
+    return HttpResponseRedirect(reverse("entry", kwargs={"entry": randomEntry}))
