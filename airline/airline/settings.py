@@ -25,8 +25,8 @@ SECRET_KEY = 'django-insecure-6ph*jvky8r=ljcy$a=ros^hj!2nc2n8^74dfwz^(4c48@($z9n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# tencent-server = "82.157.111.242"
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
